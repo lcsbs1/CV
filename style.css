@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Monoton&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    right: 5rem;
+    box-sizing: border-box;
+}
+
+#bio{
+    word-spacing: -0.1pc;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.65rem;
+    color: #ffffff;
+    position: relative;
+    right: 38px;
+    bottom: 40px;
+}
+
+#Contato{
+    position: absolute;
+    right: 87rem;
+    top: 43.8rem;
+}
+
+#Skill{
+    position: absolute;
+    right: 55rem;
+    top: 43.8rem;
+
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    background-color: #3f3f40;
+}
+
+a{
+    color: rgb(161, 136, 179);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: rgb(118, 32, 179);
+}
+
+h1.header{
+    color: rgb(161, 136, 179);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h3{
+    margin-top: -10px;
+    color: #ffffff;
+    font-size: 1.85rem;
+    font-weight: bold;
+}
+
+canvas{
+    height: 100vh;
+    z-index: -100000;
+    position: fixed;
+    top: 0px;
+    display: block;
+}
+
+.mb{
+    margin-bottom: 3rem;
+}
+
+.logo{
+    font-family: 'Monoton', cursive;
+    color: #fff;
+    font-size: 10rem;
+}
+
+.logo:hover{
+    color: rgb(118, 32, 179);
+}
+
+.link-list ul li{
+    list-style: none;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.link-list h1{
+    color: rgb(161, 136, 179);
+    font-size: 2.5rem;
+}
+
+.link-list a{
+    color: #fff;
+}
+
+.link-list a:hover{
+    color: rgb(118, 32, 179);
+}
+
+.link-list ul li span{
+    background-color: #e91e63;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 3px 6px;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    color: #fff;
+}
+
+#lcs{
+    top: 17rem;
+}
+
+.footer p{
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.footer p a{
+    font-weight: bold;
+}
+
+.island{
+    position: absolute;
+    left: 82.3rem;
+    bottom: 40rem;
+}
+
+.page{
+    position: absolute;
+    left: 82.3rem;
+    bottom: 5rem;
+    box-shadow: 10px;
+    border-radius: 50px;
+}
+
+.page a:hover{
+    background: black;
+}
