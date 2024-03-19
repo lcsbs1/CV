@@ -1,143 +1,285 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Monoton&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
 
 *{
-    padding: 0;
     margin: 0;
-    right: 5rem;
+    padding: 0;
     box-sizing: border-box;
-}
-
-#bio{
-    word-spacing: -0.1pc;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.65rem;
-    color: #ffffff;
-    position: relative;
-    right: 38px;
-    bottom: 40px;
-}
-
-#Contato{
-    position: absolute;
-    right: 87rem;
-    top: 43.8rem;
-}
-
-#Skill{
-    position: absolute;
-    right: 55rem;
-    top: 43.8rem;
-
+    font-family: 'Raleway', sans-serif;
 }
 
 body{
-    font-family: 'Ubuntu', sans-serif;
-    height: 100%;
-    background-color: #3f3f40;
+    font-size: 14px;
 }
 
-a{
-    color: rgb(161, 136, 179);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover{
-    color: rgb(118, 32, 179);
-}
-
-h1.header{
-    color: rgb(161, 136, 179);
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-h3{
-    margin-top: -10px;
-    color: #ffffff;
-    font-size: 1.85rem;
-    font-weight: bold;
-}
-
-canvas{
+header{
+    width: 100%;
     height: 100vh;
-    z-index: -100000;
+    background-color: #280000;
+    color: #fff;
+}
+
+header #particles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .info-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: 100vh;
+}
+
+header .info-text h1{
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
+header .info-text h3{
+    font-size: 1.5rem;
+}
+
+header .info-text .scroll{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    color: #fff;
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+}
+
+header .info-text .scroll:hover{
+    opacity: 0.7;
+}
+
+header .info-text .scroll::before{
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100%{
+        opacity: 0;
+    }
+    15%, 45%{
+        opacity: 1;
+    }
+    60%{
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
+        opacity: 0;
+    }
+}
+
+#about{
+    right: 0px;
+
+}
+
+#about, #features{
+    background-color: #280000;
+    padding: 40px;
+}
+
+#about .header, #features .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#about .header h1, #features .header h1{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#about .header a, #features .header a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#about .header a:hover, #features .header a:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+#about .card, #features .card{
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#about .card:hover, #features .card:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+#about .card img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#about .card .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#about .card .info h1, #features .card .info h1{
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+}
+
+#about .card .info p, #features .card .info p{
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#features .feature-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#features .feature-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+
+#features .feature-cards .card .info i{
+    color: #fff;
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#features .feature-cards .card .info h1{
+    text-align: center;
+}
+
+#features .feature-cards .card .info p{
+    font-size: 1.1rem;
+}
+
+.scroll-top{
+    display: none;
     position: fixed;
-    top: 0px;
-    display: block;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fbfcff;
+    color: #000000;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 16px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
 }
 
-.mb{
-    margin-bottom: 3rem;
+.scroll-top:hover{
+    border-color: #fff;
+    box-shadow: none;
 }
 
-.logo{
-    font-family: 'Monoton', cursive;
-    color: #fff;
-    font-size: 10rem;
+@media screen and (max-width: 720px) {
+    header .info-text h1{
+        font-size: 4rem;
+    }
+
+    header .info-text h3{
+        font-size: 1.1rem;
+    }
+
+    #about .card{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .card img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
 }
 
-.logo:hover{
-    color: rgb(118, 32, 179);
+.img{
+    max-width: 650px;
+    max-height: 550px;
 }
 
-.link-list ul li{
-    list-style: none;
-    margin-right: 2rem;
-    font-size: 1.8rem;
-    margin-bottom: 0;
-}
-
-.link-list h1{
-    color: rgb(161, 136, 179);
-    font-size: 2.5rem;
-}
-
-.link-list a{
-    color: #fff;
-}
-
-.link-list a:hover{
-    color: rgb(118, 32, 179);
-}
-
-.link-list ul li span{
-    background-color: #e91e63;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    padding: 3px 6px;
+.lcs{
+    text-align: center;
+    font-size: 20px;
+    color:#ccc;
+    padding-top: 30px;
+    font-style: italic;
     font-weight: bold;
-    margin-left: 0.5rem;
-    color: #fff;
+    
 }
 
-#lcs{
-    top: 17rem;
-}
-
-.footer p{
-    color: #fff;
-    font-size: 1.3rem;
-}
-
-.footer p a{
+.lc{
     font-weight: bold;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
 }
 
-.island{
-    position: absolute;
-    left: 82.3rem;
-    bottom: 40rem;
+.lc:hover{
+    color: rgb(156, 21, 21);
 }
 
-.page{
-    position: absolute;
-    left: 82.3rem;
-    bottom: 5rem;
-    box-shadow: 10px;
-    border-radius: 50px;
+.porra{
+    position: relative;
+    left: 600px;
 }
 
-.page a:hover{
-    background: black;
+.about2{
+    padding-top: 12px;
+}
+
+.jorge{
+    text-decoration: none;
+    color:#ccc;
+}
+
+jorge:hover{
+    color: rgb(156, 21, 21);
 }
