@@ -18,7 +18,7 @@ body{
 header{
     width: 100%;
     height: 100vh;
-    background-color: #280000;
+    background-color: #38244e;
     color: #fff;
 }
 
@@ -94,14 +94,14 @@ header .info-text .scroll::before{
 }
 
 #about, #features{
-    background-color: #280000;
+    background-color: #38244e;
     padding: 40px;
 }
 
 #about .header, #features .header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     margin-bottom: 40px;
 }
 
@@ -263,13 +263,10 @@ header .info-text .scroll::before{
 }
 
 .lc:hover{
-    color: rgb(156, 21, 21);
+    color: rgb(0, 0, 0);
 }
 
-.porra{
-    position: relative;
-    left: 600px;
-}
+
 
 .about2{
     padding-top: 12px;
@@ -282,4 +279,8 @@ header .info-text .scroll::before{
 
 jorge:hover{
     color: rgb(156, 21, 21);
+}
+
+.menu{
+    justify-content: space-between;
 }
