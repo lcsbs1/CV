@@ -1,77 +1,90 @@
-particlesJS("background", {
-
+particlesJS("particles", {
     particles: {
         number: {
-            value: 30, //numero de pariculas
+            value: 100,
             density: {
                 enable: true,
-                value_area: 285, //area onde as particulas vao estar na tela
-            },
+                value_area: 800
+            }
         },
         color: {
-            value: "#ffffff", // cor das particulas
-        }, 
+            value: "#ffffff"
+        },
         shape: {
-            type: "circle", // formato
+            type: "circle",
+            stroke: {
+                width: 0,
+                color: "#000000"
+            }
         },
         opacity: {
-            value: 0.8, //opacidade das particulas
-            random: true, 
-            anum: {
-                enable: true,
-                speed: 3,
-                opacity_min: 0.1, 
-                sync: false, 
-            },
-        },
-
-        size: {
-            value: 5, //tamanho das particulas
+            value: 0.8,
             random: true,
-            anim: {
+            animation: {
                 enable: true,
-                speed: 4,
-                size_min: 0.3,
-                sync: false,
-            },
+                speed: 1,
+                opacity_min: 0,
+                sync: false
+            }
         },
-
-        //conectar linhas
+        size: {
+            value: 3,
+            random: true
+        },
         line_linked: {
             enable: true,
-            distance: 150, //distancia uma das outras particulas
+            distance: 150,
             color: "#ffffff",
             opacity: 0.4,
-            width: 1,
+            width: 1
         },
-
-        //movimento das particulas
         move: {
             enable: true,
             speed: 2,
             direction: "none",
             random: true,
             straight: false,
-            out_mode: "bounce", //particulas podem sair da tela
+            out_mode: "out",
             bounce: false,
-        },
-
-        //configuraçoes de interaçao
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: {
-                    enable: true, // habilitar interaçao
-                    mode: "repulse",
-                },
-                onclick: {
-                    enable: true, 
-                    mode: "push, "
-                },
-                resize: true,
-            },
-        },
+        }
     },
-    
+    interactivity: {
+        detectsOn: "canvas",
+        events: {
+            onHover: {
+                enable: true,
+                mode: "push"
+            },
+            onClick: {
+                enable: true,
+                mode: "push"
+            },
+            resize: true
+        },
+        modes: {
+            repulse: {
+                distance: 100,
+                duration: 0.4
+            },
+            push: {
+                particles_nb: 4
+            }
+        }
+    },
+    retina_detect: true
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+    });
 }
-)
+
+window.addEventListener('scroll', function () {
+    var scrollTopButton = document.querySelector('.scroll-top');
+    if (this.window.pageYOffset > 200) {
+        scrollTopButton.style.display = 'block';
+    } else {
+        scrollTopButton.style.display = 'none';
+    }
+});
