@@ -9,7 +9,7 @@
       justify-content: center;      /* Centraliza verticalmente */
       align-items: center;          /* Centraliza horizontalmente */
       font-family: 'Ubuntu', sans-serif;
-      background: linear-gradient(270deg, 
+      background-image: radial-gradient(circle at bottom left, 
       #000000,   /* Vermelho */
       #198cd9,   /* Amarelo */
       #c335ef,   /* Verde claro */
@@ -17,7 +17,7 @@
       #000000    /* Roxo */
       );
       background-size: 600% 600%;
-      animation: gradientBG 5s ease infinite;
+      animation: gradientBG 17s ease infinite;
       color: white;
       text-align: center;
     }
@@ -43,7 +43,7 @@
       background-size: 600% 600%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: gradientText 3s ease infinite;
+      animation: gradientText 9s ease infinite;
     }
 
     /* Botão de link */
